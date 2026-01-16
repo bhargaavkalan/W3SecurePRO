@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>W3Secure PRO - Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ✅ FIXED CENTER ALIGNMENT -->
+  <div class="auth-wrapper">
+    <div class="panel auth-card">
+
+      <div class="brand" style="margin-bottom:10px;">
+        <div class="logo"></div>
+        <div>
+          <h1>W3Secure</h1>
+          <p>PRO Platform - Create Account</p>
+        </div>
+      </div>
+
+      <h3 style="margin:18px 0 8px;">Register</h3>
+      <div class="small">Create your account (Saved in database)</div>
+
+      <form onsubmit="handleRegister(event)" style="margin-top:14px;">
+        <input class="input" id="reg_username" placeholder="Username" required />
+        <div style="height:10px"></div>
+
+        <input class="input" id="reg_password" type="password" placeholder="Password" required />
+        <div style="height:10px"></div>
+
+        <select class="input" id="reg_role">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <div style="height:10px"></div>
+        <button class="btn primary" style="width:100%;">Create Account</button>
+      </form>
+
+      <div id="reg_msg" class="small" style="margin-top:12px;"></div>
+
+      <div class="small" style="margin-top:16px;">
+        Already have an account?
+        <a href="index.html" style="color:#22d3ee;font-weight:700;">Login</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>W3Secure PRO - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="dashboardLoad()">
+  <div class="container">
+    <div class="sidebar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>W3Secure</h1>
+          <p>PRO Platform</p>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="targets.html">🎯 Targets</a>
+        <a href="scans.html">🛡️ Scans</a>
+      </div>
+
+      <div style="margin-top:20px;">
+        <button class="btn" onclick="logout()" style="width:100%;">Logout</button>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <h2>Dashboard</h2>
+        <div class="right">
+          <span class="badge">Backend Live ✅</span>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Total Targets</h3>
+          <div class="big" id="totalTargets">0</div>
+        </div>
+        <div class="card">
+          <h3>Total Scans</h3>
+          <div class="big" id="totalScans">0</div>
+        </div>
+        <div class="card">
+          <h3>Security Mode</h3>
+          <div class="big" style="font-size:18px;">Audit / Safe ✅</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Client Friendly Summary</h3>
+        <div class="small">
+          W3Secure detects risks like missing security headers, open CORS, and exposed files.
+          It generates easy-to-understand results + AI mitigation to help clients fix issues fast.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

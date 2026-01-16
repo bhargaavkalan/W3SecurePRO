@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>W3Secure PRO - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ✅ FIXED CENTER ALIGNMENT -->
+  <div class="auth-wrapper">
+    <div class="panel auth-card">
+
+      <div class="brand" style="margin-bottom:10px;">
+        <div class="logo"></div>
+        <div>
+          <h1>W3Secure</h1>
+          <p>PRO Vulnerability Assessment Platform</p>
+        </div>
+      </div>
+
+      <h3 style="margin:18px 0 8px;">Login</h3>
+      <div class="small">Sign in to access your dashboard</div>
+
+      <form onsubmit="handleLogin(event)" style="margin-top:14px;">
+        <input class="input" id="username" placeholder="Username" required />
+        <div style="height:10px"></div>
+
+        <input class="input" id="password" type="password" placeholder="Password" required />
+        <div style="height:10px"></div>
+
+        <button class="btn primary" style="width:100%;">Login</button>
+      </form>
+
+      <div id="msg" class="small" style="margin-top:12px;"></div>
+
+      <div class="small" style="margin-top:16px;">
+        Don’t have an account?
+        <a href="register.html" style="color:#22d3ee;font-weight:700;">Create one</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

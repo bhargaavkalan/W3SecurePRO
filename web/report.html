@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>W3Secure PRO - Report</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="reportLoad()">
+  <div class="container">
+    <div class="sidebar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>W3Secure</h1>
+          <p>PRO Platform</p>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="targets.html">🎯 Targets</a>
+        <a href="scans.html">🛡️ Scans</a>
+      </div>
+
+      <div style="margin-top:20px;">
+        <button class="btn" onclick="logout()" style="width:100%;">Logout</button>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <h2>Report <span id="scanId"></span></h2>
+        <div class="right">
+          <span class="badge">Client Friendly View</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Target</h3>
+        <div class="small" id="targetUrl"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Client Friendly Findings</h3>
+        <div id="clientBox" class="grid" style="grid-template-columns:repeat(2,1fr)"></div>
+      </div>
+
+      <div class="panel">
+        <h3>AI Mitigation Advisor</h3>
+        <div class="row">
+          <input class="input" id="aititle" placeholder="Issue Title (e.g., Missing Security Headers)" />
+          <input class="input" id="aievidence" placeholder="Evidence (e.g., CSP missing)" />
+          <button class="btn primary" onclick="askAI()">Ask AI</button>
+        </div>
+        <pre id="aiout">AI output will appear here...</pre>
+      </div>
+
+      <div class="panel">
+        <h3>Technical JSON Output</h3>
+        <pre id="techJson"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

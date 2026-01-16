@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>W3Secure PRO - Targets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadTargets()">
+  <div class="container">
+    <div class="sidebar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>W3Secure</h1>
+          <p>PRO Platform</p>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="targets.html">🎯 Targets</a>
+        <a href="scans.html">🛡️ Scans</a>
+      </div>
+
+      <div style="margin-top:20px;">
+        <button class="btn" onclick="logout()" style="width:100%;">Logout</button>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <h2>Targets</h2>
+        <div class="right">
+          <span class="badge">Secure Workspace</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Add New Target</h3>
+        <form onsubmit="addTarget(event)">
+          <div class="row">
+            <input class="input" id="tname" placeholder="Target Name (Juice Shop)" required />
+            <input class="input" id="turl" placeholder="Base URL (http://127.0.0.1:3000)" required />
+            <button class="btn primary">Add</button>
+          </div>
+        </form>
+        <div id="tmsg" class="small"></div>
+      </div>
+
+      <div class="panel">
+        <h3>My Targets</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Base URL</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="targetsBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

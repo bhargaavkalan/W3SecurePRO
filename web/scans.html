@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>W3Secure PRO - Scans</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="scansLoad()">
+  <div class="container">
+    <div class="sidebar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>W3Secure</h1>
+          <p>PRO Platform</p>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="targets.html">🎯 Targets</a>
+        <a href="scans.html">🛡️ Scans</a>
+      </div>
+
+      <div style="margin-top:20px;">
+        <button class="btn" onclick="logout()" style="width:100%;">Logout</button>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <h2>Scans</h2>
+        <div class="right">
+          <span class="badge">Ready</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Run New Scan</h3>
+        <div class="row">
+          <select class="input" id="targetSelect"></select>
+          <div></div>
+          <button class="btn primary" onclick="runScan()">Run Scan</button>
+        </div>
+        <div id="smsg" class="small"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Scan History</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Scan ID</th>
+              <th>Target</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Report</th>
+            </tr>
+          </thead>
+          <tbody id="scanBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
